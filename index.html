@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="RmY_4HNrpWr1XHXbxAirJ_HmxaPTc1vA_nLhrFDBmEk">
+    <meta name="google-site-verification" content="RmY_4HNrpWr1XHXbxAirJ_HmxaPTc1vA_nLhrFDBmEk">
+
+    <!--Description-->
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Kwong">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Kwong&#39;s Blog">
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Kwong&#39;s Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>Kwong&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    
+      <link rel="icon" href="/favicon.png">
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    <!--  -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-131010261-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131010261-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3706146821469808",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Kwong's Blog</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2018/11/28/whistle实战/">
+                whistle实战
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-11-28</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在日常前端开发中，各位同学多少都应该接触过网络请求代理工具（如： fiddler、charles等工具），使用它们来进行请求分析、伪造请求、移动端代理开发调试等。而 whistle 是一款 Node 实现的一款开源跨平台 Web 调试代理工具，可以简单理解为 Web 版的 fiddler / charles。从使用体验上来说，高效易用，没有fiddler复杂的规则配置，映射域名也十分方便，而且提供了更多额外的功能,还支持插件扩展。</p>
+<p>本文章所有内容都建立在你已经安装了 Node 的前提之上。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>npm install -g whistle</code></p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">whistle start</span><br><span class="line"><span class="comment">// 或</span></span><br><span class="line">w2 start</span><br></pre></td></tr></table></figure>
+<p>启动成功后，即可见此信息（默认端口号为:8899）：<br><img src="/source/images/img_whistle_01.png" alt=""><br>访问 <code>127.0.0.1:8899</code> 即可进入配置页面</p>
+<h3 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h3><p>以往配置host的方式，不能使用端口,只能 <code>ip pattern</code> 这样的形式:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 普通模式</span><br><span class="line">127.0.0.1 www.test.com</span><br><span class="line"><span class="meta">#</span> 组合模式</span><br><span class="line">127.0.0.1 www.test.cn www.test.com.cn</span><br></pre></td></tr></table></figure></p>
+<p>但是 whistlek 支持添加端口，同时还支持<a href="https://avwo.github.io/whistle/pattern.html" target="_blank" rel="noopener">路由正则匹配</a>、替换内容、修改请求、编辑内容等强大功能。<br>使用方法:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 默认模式</span><br><span class="line">127.0.0.1 test.uc.com:7001</span><br><span class="line"><span class="meta">#</span> 组合模式</span><br><span class="line">127.0.0.1 www.test.cn www.test.com.cn:7001</span><br><span class="line"><span class="meta">#</span> 对域名路径替换host</span><br><span class="line">127.0.0.1:8086 test.uc.com</span><br><span class="line"><span class="meta">#</span> 修改返回的状态码</span><br><span class="line">www.uc.com statusCode://500</span><br><span class="line"><span class="meta">#</span> 插入HTML(Windows的路径分隔符可以用`\`和`/`)</span><br><span class="line">www.uc.com html://&#123;路径&#125;/test.html</span><br><span class="line"><span class="meta">#</span> 插入JS</span><br><span class="line">www.uc.com js://&#123;路径&#125;/test.js</span><br><span class="line"><span class="meta">#</span> 插入css</span><br><span class="line">www.uc.com css://&#123;路径&#125;/test.css</span><br><span class="line"><span class="meta">#</span> 把内容 append 到请求后面</span><br><span class="line">www.uc.com/style.css resAppend://&#123;cssAppend.css&#125;</span><br><span class="line"><span class="meta">#</span> 完全替换请求内容</span><br><span class="line">test.uc.com/style.css resBody://&#123;cssAppend.css&#125;</span><br><span class="line"><span class="meta">#</span> 请求改写与接口mock,注意这里的改写是whistle抓包请求的改写，浏览器调试看到的内容仍然是原来的</span><br><span class="line">test.uc.com ua://&#123;test_ua&#125;</span><br><span class="line"><span class="meta">#</span> 远程调试，从界面主菜单 “Weinre” 可打开 inspect 界面调试该页面</span><br><span class="line">127.0.0.1 weinre://debug_mypage</span><br></pre></td></tr></table></figure></p>
+<h2 id="接入mock数据"><a href="#接入mock数据" class="headerlink" title="接入mock数据"></a>接入mock数据</h2><p>上面提到 whistle 是可以安装插件的，这里我们使用一个强大的mock插件，首先安装<br><code>npm i -g whistle.vase</code><br>然后在 <code>plugin</code> 菜单打开 <code>vase</code> 的界面,新建一个名字为 <code>mock_demo</code> 的配置，并选择模板为 mock 。再输入下面内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"list|10"</span>: [&#123;</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"@string"</span>,</span><br><span class="line">    <span class="string">"id|+1"</span>: <span class="number">10000</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后，在 <code>Rules</code> 下配置一条 <code>vase</code> 的规则即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.uc.com/test.json vase://mock_demo</span><br></pre></td></tr></table></figure></p>
+<p>搭配上 <code>vase</code> 的 <code>script</code> 模板就可以自己使用js生成数据</p>
+<p><strong>附:</strong><br><a href="http://wproxy.org/whistle/" target="_blank" rel="noopener">whistle中文文档</a></p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2018/11/15/搜索渗透/">
+                【转载】搜索渗透
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-11-15</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>搜索引擎是我日常工作中用得最多的一款工具，国内常用的搜索引擎包括Baidu，sougou，bing，以及信息安全从业人员必备的几款网络搜索引擎。</p>
+<p>Google搜索引擎</p>
+<p>这里之所以要介绍google搜索引擎，是因为它有别于百度、搜狗等内容搜索引擎，其在安全界有着非同一般的地位，甚至专门有一名词为google hacking用来形容google与安全非同寻常的关系。</p>
+<p>google基本语法<br>Index of/　使用它可以直接进入网站首页下的所有文件和文件夹中。</p>
+<p>intext:　　将返回所有在网页正文部分包含关键词的网页。</p>
+<p>intitle:　　将返回所有网页标题中包含关键词的网页。</p>
+<p>cache:　　搜索google里关于某些内容的缓存。</p>
+<p>define:　　搜索某个词语的定义。</p>
+<p>filetype:　　搜索指定的文件类型，如：.bak，.mdb，.inc等。</p>
+<p>info:　　查找指定站点的一些基本信息。</p>
+<p>inurl:　　搜索我们指定的字符是否存在于URL中。</p>
+<p>Link:　link:thief.one可以返回所有和thief.one做了链接的URL。</p>
+<p>site:　site:thief.one将返回所有和这个站有关的URL。</p>
+<p>+　　把google可能忽略的字列如查询范围。</p>
+<p>-　　把某个字忽略，例子：新加-坡。</p>
+<p>~　　同意词。</p>
+<p>.　　单一的通配符。</p>
+<p>*　　通配符，可代表多个字母。</p>
+<p>“”　 精确查询。</p>
+<p>搜索不同地域网站<br>inurl:tw 台湾</p>
+<p>inurl:jp 日本</p>
+<p>利用google暴库</p>
+<p>利用goole可以搜索到互联网上可以直接下载到的数据库文件，语法如下：<br>inurl:editor/db/inurl:eWebEditor/db/inurl:bbs/data/inurl:databackup/inurl:blog/data/inurl:\boke\datainurl:bbs/database/inurl:conn.aspinc/conn.aspServer.mapPath(“.mdb”)allinurl:bbs datafiletype:mdb inurl:databasefiletype:inc conninurl:data filetype:mdbintitle:”index of” data </p>
+<p>利用goole搜索敏感信息</p>
+<p>利用google可以搜索一些网站的敏感信息，语法如下:<br>intitle:”index of” etcintitle:”Index of” .sh_historyintitle:”Index of” .bash_historyintitle:”index of” passwdintitle:”index of” people.lstintitle:”index of” pwd.dbintitle:”index of” etc/shadowintitle:”index of” spwdintitle:”index of” master.passwdintitle:”index of” htpasswdinurl:service.pwd </p>
+<p>利用google搜索C段服务器信息</p>
+<p>此技巧来自lostwolf<br>site:218.87.21.*<br>可通过google可获取218.87.21.0/24网络的服务信息。</p>
+<p>shodan搜索引擎</p>
+<p>shodan网络搜索引擎偏向网络设备以及服务器的搜索，具体内容可上网查阅，这里给出它的高级搜索语法。</p>
+<p>搜索语法</p>
+<p>hostname：　　搜索指定的主机或域名，例如 hostname:”google”<br>port：　　搜索指定的端口或服务，例如 port:”21”</p>
+<p>country：　　搜索指定的国家，例如 country:”CN”</p>
+<p>city：　　搜索指定的城市，例如 city:”Hefei”</p>
+<p>org：　　搜索指定的组织或公司，例如 org:”google”</p>
+<p>isp：　　搜索指定的ISP供应商，例如 isp:”China Telecom”</p>
+<p>product：　　搜索指定的操作系统/软件/平台，例如 product:”Apache httpd”</p>
+<p>version：　　搜索指定的软件版本，例如 version:”1.6.2”</p>
+<p>geo：　　搜索指定的地理位置，例如 vgeo:”31.8639, 117.2808”`</p>
+<p>before/after：　　搜索指定收录时间前后的数据，格式为dd-mm-yy，例如 `before:”11-11-15”v</p>
+<p>net：　　搜索指定的IP地址或子网，例如 net:”210.45.240.0/24”</p>
+<p>以上内容参考自：xiaix’s Blog</p>
+<p>censys搜索引擎</p>
+<p>censys搜索引擎功能与shodan类似，以下几个文档信息。</p>
+<p>帮助文档：</p>
+<p><a href="https://www.censys.io/certificates/help" target="_blank" rel="noopener">https://www.censys.io/certificates/help</a></p>
+<p>注：打开链接后末尾q=加你要查询IP</p>
+<p>IP查询</p>
+<p><a href="https://www.censys.io/ipv4?q=" target="_blank" rel="noopener">https://www.censys.io/ipv4?q=</a></p>
+<p>域名查询，用法如上</p>
+<p><a href="https://www.censys.io/domain?q=" target="_blank" rel="noopener">https://www.censys.io/domain?q=</a></p>
+<p>证书查询，用法如上</p>
+<p><a href="https://www.censys.io/certificates?q=" target="_blank" rel="noopener">https://www.censys.io/certificates?q=</a></p>
+<p>搜索语法</p>
+<p>默认情况下censys支持全文检索。<br>23.0.0.0/8 or 8.8.8.0/24　　可以使用and or not</p>
+<p>80.http.get.status_code: 200　　指定状态</p>
+<p>80.http.get.status_code:[200 TO 300]　　200-300之间的状态码</p>
+<p>location.country_code: DE　　国家</p>
+<p>protocols: (“23/telnet” or “21/ftp”)　　协议</p>
+<p>tags: scada　　标签</p>
+<p>80.http.get.headers.server：nginx　　服务器类型版本</p>
+<p>autonomous_system.description: University　　系统描述</p>
+<p>正则</p>
+<p>钟馗之眼</p>
+<p>钟馗之眼搜索引擎偏向web应用层面的搜索。</p>
+<p>搜索语法<br>app:nginx　　组件名</p>
+<p>ver:1.0　　版本</p>
+<p>os:windows　　操作系统</p>
+<p>country:”China”　　国家</p>
+<p>city:”hangzhou”　　城市</p>
+<p>port:80　　端口</p>
+<p>vhostname:google　　主机名</p>
+<p>`site:thief.onev　　网站域名</p>
+<p>desc:nmask　　描述</p>
+<p>keywords:nmask’blog　　关键词</p>
+<p>service:ftpv　　服务类型</p>
+<p>ip:8.8.8.8　　ip地址</p>
+<p>cidr:8.8.8.8/24　　ip地址段</p>
+<p>FoFa搜索引擎</p>
+<p>FoFa搜索引擎偏向资产搜索。</p>
+<p>搜索语法<br>title=”abc” 从标题中搜索abc。例：标题中有北京的网站。</p>
+<p>header=”abc” 从http头中搜索abc。例：jboss服务器。</p>
+<p>body=”abc”从html正文中搜索abc。例：正文包含Hacked by。</p>
+<p>domain=”qq.com” 搜索根域名带有qq.com的网站。例： 根域名是qq.com的网站。</p>
+<p>host=”.gov.cn” 从url中搜索.gov.cn,注意搜索要用host作为名称。</p>
+<p>port=”443” 查找对应443端口的资产。例： 查找对应443端口的资产。</p>
+<p>ip=”1.1.1.1” 从ip中搜索包含1.1.1.1的网站,注意搜索要用ip作为名称。</p>
+<p>protocol=”https” 搜索制定协议类型(在开启端口扫描的情况下有效)。例： 查询https协议资产。</p>
+<p>city=”Beijing” 搜索指定城市的资产。例： 搜索指定城市的资产。</p>
+<p>region=”Zhejiang” 搜索指定行政区的资产。例： 搜索指定行政区的资产。</p>
+<p>country=”CN” 搜索指定国家(编码)的资产。例： 搜索指定国家(编码)的资产。</p>
+<p>cert=”google.com” 搜索证书(https或者imaps等)中带有google.com的资产。</p>
+<p>高级搜索：<br>title=”powered by” &amp;&amp; title!=discuz</p>
+<p>title!=”powered by” &amp;&amp; body=discuz</p>
+<p>(body=”content=\”WordPress” || (header=”X-Pingback” &amp;&amp; header=”/xmlrpc.php” &amp;&amp; body=”/wp-includes/“)) &amp;&amp; host=”gov.cn”</p>
+<p>Dnsdb搜索引擎</p>
+<p>dnsdb搜索引擎是一款针对dbs解析的查询平台。</p>
+<p>搜索语法</p>
+<p>DnsDB查询语法结构为条件1 条件2 条件3 …., 每个条件以空格间隔, DnsDB 会</p>
+<p>把满足所有查询条件的结果返回给用户.</p>
+<p>域名查询条件<br>域名查询是指查询顶级私有域名所有的DNS记录, 查询语法为domain:.</p>
+<p>例如查询google.com 的所有DNS记录: domain:google.com.</p>
+<p>域名查询可以省略domain:.</p>
+<p>主机查询条件<br>查询语法:host:</p>
+<p>例如查询主机地址为<a href="http://mp3.example.com的DNS记录" target="_blank" rel="noopener">http://mp3.example.com的DNS记录</a>: host:<a href="http://map3.example.com" target="_blank" rel="noopener">http://map3.example.com</a></p>
+<p>主机查询条件与域名查询查询条件的区别在于, 主机查询匹配的是DNS记录的</p>
+<p>Host值</p>
+<p>按DNS记录类型查询<br>查询语法: type:.</p>
+<p>例如只查询A记录: type:a</p>
+<p>使用条件:必须存在domain:或者host:条件,才可以使用type:查询语法</p>
+<p>按IP限制<br>查询语法: ip:</p>
+<p>查询指定IP:ip:8.8.8.8, 该查询与直接输入8.8.8.8进行查询等效</p>
+<p>查询指定IP范围: ip:8.8.8.8-8.8.255.255</p>
+<p>CIDR: ip:8.8.0.0/24</p>
+<p>IP最大范围限制65536个</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2018/11/12/前端开发Chrome插件/">
+                前端开发Chrome插件
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-11-12</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>浏览器建议使用 Chrome，下面推荐一些常用扩展</p>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi" target="_blank" rel="noopener">React Developer Tools</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank" rel="noopener">Redux DevTools</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/sandwidch-request-modifie/gpfmnkbmokagemomhjafbmpkhajajkeh" target="_blank" rel="noopener">Sandwidch Request Modifier 三文治请求修改器</a> (很常用)</li>
+<li><a href="https://chrome.google.com/webstore/detail/quico-%E5%BF%AB%E7%A0%81-qr-code-generato/cobbkmppakjllmgndpfmejaflbjfehci" target="_blank" rel="noopener">Quico  快码  次世代生产力二维码工具 二维码生成器</a></li>
+</ul>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2018/07/25/快速实现高精度动画/">
+                快速实现高精度动画
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-07-25</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>目前的动画形式多种多样，如canvas、css、svg、gif、视频都是我们常见的形式。  </p>
+<ul>
+<li>手写实现svg和canvas动画，控制粒度较细，工作量大，对着效果来实现容易有买家秀和卖家秀的区别，且客户端不能复用</li>
+<li>css我们经常使用来实现过渡效果、加载的动画，对于一些复杂的动画仍无法满足需求</li>
+<li>gif动画，文件较大，带透明通道的容易有毛边，且只能在一个固定的尺寸里渲染，颜色数最高256导致画质不高，</li>
+<li>png图序列，不能放大，且文件较大</li>
+<li>视频，文件体积十分大，影响加载时间</li>
+</ul>
+<p>由于各个动画实现方案有着各种问题，所以十分需要有一种简单、高效、体积小、还原度高的动画解决方案。在一次偶尔的情况下，朋友推荐了lottie库。</p>
+<h2 id="Lottie-简介"><a href="#Lottie-简介" class="headerlink" title="Lottie 简介"></a>Lottie 简介</h2><p>众所周知，使用代码实现一套复杂的动画是一件困难且工作量大的事情，如果是在不同的平台，不同的分辨率下，难度又会提升一个级别。<br>现在，Airbnb开源了一个叫 Lottie 的跨平台动画库（前身是 bodymovin，在版本号为 <a href="https://github.com/airbnb/lottie-web/blob/22bd2158778ade56c59df39975687259e7080993/History.md#v-500" target="_blank" rel="noopener">v5.0.0</a> 的时候进行了更名。），能分析Adobe After Effects导出的动画，并完美展现动画效果。它最大的优点是提供了一套完整的跨平台的动画实现方案，如下图：<br><img src="https://cdn.nlark.com/lark/0/2018/jpeg/81842/1532570993728-5b697e63-fc69-43c1-aa47-b482a81bca6c.jpeg" alt="flow.jpeg"> </p>
+<h3 id="Lottie原理"><a href="#Lottie原理" class="headerlink" title="Lottie原理"></a>Lottie原理</h3><p>在 AE 中，动画是由各个图层组成的，图层中的内容也可以拆分为多个元素。拆分元素之后，根据动画需求，可以单独对图层或者图层中的元素做平移、旋转、收缩等操作。<br>简单来说就是 Lottie 是通过 bodymovin 这个插件来将 AE 的工程文件的图层元素转化为对应的 json 文件数据，Lottie 则负责解析这些动画的数据，将其绘制在网页上。</p>
+<h3 id="Lottie的优点"><a href="#Lottie的优点" class="headerlink" title="Lottie的优点"></a>Lottie的优点</h3><p>对于GIF、手写动画实现、帧动画来说，这个方案：  </p>
+<ol>
+<li>极大地提高了动画的开发效率以及减少工作量（仅需要设计师完成动画效果的设计，导出json，前端展示，无需关心实现的细节）  </li>
+<li>动画还原度高  </li>
+<li>线上更新也容易（只需要替换json文件和素材）  </li>
+<li>json文件比gif文件小，性能也更好。  </li>
+<li>跨平台</li>
+</ol>
+<h3 id="Lottie的不足"><a href="#Lottie的不足" class="headerlink" title="Lottie的不足"></a>Lottie的不足</h3><ol>
+<li>lottie的动画，只能是svg/canvas动画</li>
+<li>json文件的大小受限于设计师对AE的使用，如果图层很多，文件体积也会增大</li>
+<li>有部分AE动画的属性，lottie暂未支持（常用的3D图层变换、几乎所有效果器[effects]、图层样式[layer styles]、叠加模式[blending mode]、渐变[gradient ramp/gradient fill…]（好像正在加入支持，期待更新）、任意表达式[expressions]、径向擦除[radius wipe]）</li>
+<li>lottie库自身的大小，如果项目对于动画使用不高，GIF可能是更优的选择</li>
+</ol>
+<p><em>由于Lottie在CDN外链上的版本是bodymovin这个库，所以这里选择比较bodymovin的大小，npm版本是lottie-web</em></p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>大小</th>
+<th>gzip后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bodymovin.js</td>
+<td>532Kb</td>
+<td>83Kb</td>
+</tr>
+<tr>
+<td>bodymovin.js.min.js</td>
+<td>248Kb</td>
+<td>55Kb</td>
+</tr>
+<tr>
+<td>bodymovin.js_light.js(轻量版)</td>
+<td>341kb</td>
+<td>57kb</td>
+</tr>
+<tr>
+<td>bodymovin.js_light.min.js</td>
+<td>144kb</td>
+<td>36kb</td>
+</tr>
+</tbody>
+</table>
+<h3 id="同一动画对比"><a href="#同一动画对比" class="headerlink" title="同一动画对比"></a>同一动画对比</h3><p>效果：<br><img src="https://cdn.nlark.com/lark/0/2018/gif/81842/1532571503409-d928218f-08f4-418f-8426-7f4b93536801.gif" alt="合成-1.gif"><br>| 文件 | 大小 | 截图 |<br>| —- | — | —- |<br>| animation.avi | 131Mb | <img src="https://cdn.nlark.com/lark/0/2018/png/81842/1532571721471-869b52f9-eff6-4bc4-a0e7-910dae120b0b.png" alt="undefined">  |<br>| animation.gif | 85Kb | <img src="https://cdn.nlark.com/lark/0/2018/png/81842/1532571704028-7412c272-d19f-4256-b6b4-7ec38c34183e.png" alt="undefined">  |<br>| index.html + data.json | 4Kb | <img src="https://cdn.nlark.com/lark/0/2018/png/81842/1532571687840-1095b0dc-00c2-4010-8cef-1460e893725c.png" alt="undefined"> |</p>
+<h3 id="lottie的使用"><a href="#lottie的使用" class="headerlink" title="lottie的使用"></a>lottie的使用</h3><h4 id="npm版本"><a href="#npm版本" class="headerlink" title="npm版本"></a>npm版本</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lottie.loadAnimation(&#123;</span><br><span class="line">  container: element, <span class="comment">// dom元素</span></span><br><span class="line">  renderer: <span class="string">'svg'</span>, <span class="comment">// 渲染方式</span></span><br><span class="line">  loop: <span class="literal">true</span>,</span><br><span class="line">  autoplay: <span class="literal">true</span>,</span><br><span class="line">  path: <span class="string">'data.json'</span> <span class="comment">// json文件的路径</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="cdn版本"><a href="#cdn版本" class="headerlink" title="cdn版本"></a>cdn版本</h4><p>在html文件的head引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"js/bodymovin.js"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- OR --&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://cdnjs.com/libraries/bodymovin"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animation = bodymovin.loadAnimation(&#123;</span><br><span class="line">  container: <span class="built_in">document</span>.getElementById(<span class="string">'lottie'</span>), <span class="comment">// Required</span></span><br><span class="line">  path: <span class="string">'data.json'</span>, <span class="comment">// Required</span></span><br><span class="line">  renderer: <span class="string">'svg/canvas/html'</span>, <span class="comment">// Required</span></span><br><span class="line">  loop: <span class="literal">true</span>, <span class="comment">// Optional</span></span><br><span class="line">  autoplay: <span class="literal">true</span>, <span class="comment">// Optional</span></span><br><span class="line">  name: <span class="string">"Hello World"</span>, <span class="comment">// Name for future reference. Optional.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><a href="https://codepen.io/airnan/pen/GOvebO" target="_blank" rel="noopener">demo1</a><br><a href="https://codepen.io/airnan/pen/jPmVMv" target="_blank" rel="noopener">demo2</a></p>
+<h2 id="可使用的场景"><a href="#可使用的场景" class="headerlink" title="可使用的场景"></a>可使用的场景</h2><ol>
+<li>业务引导动画，不需要每次在清晰度和文件大小平衡，使用lottie可提高动画清晰度和文件大小</li>
+<li>loading动画，可以实现更复杂的动画且质量不会下降，相对于GIF来说更出色</li>
+<li>礼物动画，对于有大量动画，每个动画都不相同，动画过程中有大量的旋转，透明度，大小的变化，使用lottie会变得更简单，且容易维护</li>
+<li>闪屏动画</li>
+<li>转场动画  </li>
+</ol>
+<p><a href="https://cdn.nlark.com/lark/0/2018/mp4/81842/1532570980518-80b58225-7a10-4d29-9eac-7f60a658db5f.mp4" target="_blank" rel="noopener">embed: change.mp4</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>由于lottie自身的包的体积问题，在实际项目中，对于动画要求不高的需求（如：按钮hover颜色变化、纯色loading转动）且动画使用较少的情况下，使用css或gif是更好的选择。但在使用动画效果比较频繁的项目或者动画效果要求比较高的项目，就变得十分有利了。效果比较频繁的项目可以结合业务，在不同的状态下请求不同的动画json,相对于gif和视频来说，可以大大缩减请求文件的时间，同时效果不会减弱。虽然目前仍存在不少问题，某些特效不支持，AE的bodymovin插件不够完善，json文件的说明不够详细等。但对于它带来的好处来说，仍可值得一试，毕竟软件工程没有银弹。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2018/06/12/前端国际化时间日期概述与业务实践/">
+                前端国际化时间日期概述与业务实践
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-06-12</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <blockquote>
+<p>时间日期是国际化进程中绕不过的槛啊…</p>
+</blockquote>
+<h1 id="时间概念"><a href="#时间概念" class="headerlink" title="时间概念"></a>时间概念</h1><h2 id="国际标准"><a href="#国际标准" class="headerlink" title="国际标准"></a>国际标准</h2><h3 id="GMT-格林威治标准时间"><a href="#GMT-格林威治标准时间" class="headerlink" title="GMT 格林威治标准时间"></a>GMT 格林威治标准时间</h3><p>GMT 时间就是英国格林威治时间，也就是世界标准时间，是本初子午线上的地方时，是 0 时区的区时。</p>
+<blockquote>
+<p>当执行 <code>new Date().toString()</code> 时，会返回一个美式英语日期格式的字符串，里面包含了GMT 的描述。</p>
+</blockquote>
+<h3 id="UTC-世界协调时间"><a href="#UTC-世界协调时间" class="headerlink" title="UTC 世界协调时间"></a>UTC 世界协调时间</h3><p>UTC 是通用协调时 (UTC, Universal Time Coordinated)，理论上与 GMT 时间相等（除非出现了闰秒，日常使用上可以忽略不计）。</p>
+<blockquote>
+<p>JavaScript 的 Date 对象提供了数个 UTC 时间的方法。</p>
+</blockquote>
+<h3 id="CST，PST"><a href="#CST，PST" class="headerlink" title="CST，PST"></a>CST，PST</h3><ul>
+<li>CST: UTC +8，可以同时表示美国、澳大利亚、中国、古巴四个国家的标准时间</li>
+<li>PST: UTC -8，太平洋标准时间（西八区）</li>
+</ul>
+<h3 id="DST（夏令时）"><a href="#DST（夏令时）" class="headerlink" title="DST（夏令时）"></a>DST（夏令时）</h3><p><a href="https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%97%B6%E5%88%B6#%E7%9B%AE%E5%89%8D%E5%AE%9E%E8%A1%8C%E5%A4%8F%E6%97%B6%E5%88%B6%E7%9A%84%E5%9C%B0%E5%8D%80" target="_blank" rel="noopener">《目前实行夏令时的地区》</a></p>
+<h2 id="日期时间语法"><a href="#日期时间语法" class="headerlink" title="日期时间语法"></a>日期时间语法</h2><h3 id="RFC2822"><a href="#RFC2822" class="headerlink" title="RFC2822"></a>RFC2822</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">YYYY/MM/DD HH:MM:ss ±timezon(时区用4位数字表示)</span><br><span class="line">// 2018/01/01 12:00:00+0800</span><br></pre></td></tr></table></figure>
+<h3 id="ISO-8601"><a href="#ISO-8601" class="headerlink" title="ISO 8601"></a>ISO 8601</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">YYYY-MM-DDThh:mm:ss±timezone(时区用HH:MM表示)</span><br><span class="line">// 2018-01-01T12:00:00+08:00</span><br></pre></td></tr></table></figure>
+<h3 id="两者之间的差别"><a href="#两者之间的差别" class="headerlink" title="两者之间的差别"></a>两者之间的差别</h3><ol>
+<li>当在不指定时区的情况下，RFC2822 写法会使用 UTC 时间来解析，而 ISO 8601 写法则当作本地时区处理。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2018/01/01'</span>)</span><br><span class="line"><span class="comment">// Mon Jan 01 2018 00:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2018-01-01'</span>)</span><br><span class="line"><span class="comment">// Mon Jan 01 2018 08:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>RFC2822 相对来说写法更加宽松，甚至可以兼容 <code>Mon, 06 Mar 2017 21:22:23 +0000</code> 这样的写法</li>
+<li>RFC2822 的时区表示用四位数字（+0800），而 ISO 8601 的时区表示用 HH:MM （+08:00）</li>
+</ol>
+<h2 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h2><h3 id="UTC-时区"><a href="#UTC-时区" class="headerlink" title="UTC 时区"></a>UTC 时区</h3><p>如果时间是以协调世界时（UTC）表示，则在时间后面直接加上一个 “Z”（不加空格）。“Z” 是协调世界时中 0 时区的标志。比如 <code>09:30 UTC</code> 相当于 <code>09:30Z</code>。</p>
+<h3 id="UTC-偏移量"><a href="#UTC-偏移量" class="headerlink" title="UTC 偏移量"></a>UTC 偏移量</h3><p>UTC偏移量代表了某个具体的时间值与UTC时间之间的差异。用 <code>±[hh]:[mm]</code> 或者 <code>±[hh]:[mm]</code> 或者<code>±[hh]</code> 的形式表示。比如北京时间的时区会表达成 <code>+08:00</code> / <code>+0800</code> / <code>UTC+8</code> 。</p>
+<h3 id="时区缩写"><a href="#时区缩写" class="headerlink" title="时区缩写"></a>时区缩写</h3><p>时区也可以用字母缩写形式来表示，例如 “EST、WST、CST” 等。但是它们并不是 ISO 8601 标准的一部分，不建议使用。</p>
+<h3 id="TZ-数据库"><a href="#TZ-数据库" class="headerlink" title="TZ 数据库"></a>TZ 数据库</h3><p>形如 <code>Asia/Shanghai</code> 这样的写法，在 JavaScript 里不常见。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">这里</a> 有列出所有的可选项。</p>
+<p>注意这里是按照 洲/城市 来划分的，而一个 tz 有可能对应多个不同的 UTC 偏差量（比如当地实行夏令时）。</p>
+<h2 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h2><h3 id="Unix-时间戳"><a href="#Unix-时间戳" class="headerlink" title="Unix 时间戳"></a>Unix 时间戳</h3><p>unix时间戳是从1970年1月1日（UTC/GMT的00时00分00秒）开始所经过的秒数，不考虑闰秒。</p>
+<p>获取方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> unixTimestamp = <span class="built_in">Math</span>.floor(<span class="built_in">Date</span>.now() / <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-时间戳"><a href="#JavaScript-时间戳" class="headerlink" title="JavaScript 时间戳"></a>JavaScript 时间戳</h3><p>JavaScript内的时间戳指的是当前时间到1970年1月1日00:00:00 UTC对应的毫秒数，<strong>跟 unix 时间戳相差了 1000 倍</strong>，跟其他语言/系统合作的时候需要留意。</p>
+<p>获取方式有很多种：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>.now();</span><br><span class="line">+<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().valueOf()</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().getTime()</span><br><span class="line"><span class="built_in">Number</span>(<span class="keyword">new</span> <span class="built_in">Date</span>())</span><br></pre></td></tr></table></figure>
+<p>其中性能最好的是 <code>Date.now()</code>，可以在 <a href="https://jsperf.com/date-now-vs-new-date-gettime/43" target="_blank" rel="noopener">这里</a> 跑个分看看。</p>
+<h1 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h1><p>Date 是 JavaScript 标准库里的对象，可以放心使用。但毕竟部分结果取决于宿主实现，在不同的宿主环境上还是有一定的差异（比如 <code>Date.parse()</code>）。</p>
+<p>需要注意的是，<code>Date()</code> 跟 <code>new Date()</code> 的表现是不一样的：</p>
+<ul>
+<li><code>Date()</code> 返回当前时间的字符串，且无视参数</li>
+<li><code>new Date()</code> 会根据传入参数返回一个日期对象</li>
+</ul>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p><code>new Date()</code></p>
+<p>当不带参数时，会根据系统设置的当前时间来创建一个 Date 对象。</p>
+<p><code>new Date(1524662090537)</code></p>
+<p>当传入 JavaScript 时间戳数字时，返回解析成对应的 Date 对象。注意这里不是 unix 时间戳。</p>
+<p><code>new Date(&#39;December 17, 1995 03:24:00&#39;)</code></p>
+<p><code>new Date(&#39;1995-12-17T03:24:00&#39;)</code></p>
+<p>当传入值是日期字符串时，该字符串应该能被 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse" target="_blank" rel="noopener"><code>Date.parse()</code></a> 方法识别，也就是需要符合 RFC2822 或 ISO 8601。</p>
+<p><code>new Date(1995, 11, 17, 3, 24, 0)</code></p>
+<p>当传入多个参数时，由于形参里没有时区概念，所以定义参数代表的是当地时间。</p>
+<p>如果数值大于合理范围时，相邻的数值会被调整。如 <code>new Date(2018, 0, 32)</code> 表达的是二月一日。</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="get-set"><a href="#get-set" class="headerlink" title="get / set"></a>get / set</h3><p>Date 原型上带有很多 get / set 方法，需要注意的是：</p>
+<ul>
+<li><code>Date.prototype.getMonth</code> 返回 0-11 的整数值。如 0 代表一月份，1 代表二月份 （反直觉啊..</li>
+<li>set 方法有个特性，会将超过范围的参数自动折算。如将日期推后两天，只需要 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">d.setDate( d.getDate() + <span class="number">2</span> );</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p>两个 Date 实例可以直接比较，也可以做减法。但不要做加法，否则变成了字符串拼接。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">1</span>, <span class="number">1</span>) &gt; <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2018</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2019</span>, <span class="number">1</span>, <span class="number">1</span>) + <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2018</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment">// "Fri Feb 01 2019 00:00:00 GMT+0800 (CST)Thu Feb 01 2018 00:00:00 GMT+0800 (CST)"</span></span><br></pre></td></tr></table></figure>
+<p>一般会使用时间戳相减，避免时区差异</p>
+<h2 id="格式化显示"><a href="#格式化显示" class="headerlink" title="格式化显示"></a>格式化显示</h2><p>Date 原型上也带有很多 toXXX 的方法，可以将 Date 对象转化成字符串或数字。</p>
+<p>具体 API 看文档就好，这里不做搬运。</p>
+<h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><h3 id="日期与时间"><a href="#日期与时间" class="headerlink" title="日期与时间"></a>日期与时间</h3><p>浏览器获取的当前用户所在时区、当前日期时间等信息，与系统的设置有关。也就是东八区的用户设置了西四区，那获取出来的时区也是西四区的。</p>
+<p><code>Date.prototype.getTimezoneOffset</code> 可以获取当前时区与 UTC 时区的差值，单位是分钟。通过这个方法可以猜出用户所在哪个时区。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().getTimezoneOffset()</span><br><span class="line"><span class="comment">// -480</span></span><br></pre></td></tr></table></figure>
+<h3 id="语言与地区"><a href="#语言与地区" class="headerlink" title="语言与地区"></a>语言与地区</h3><p>系统的这个设置会影响所有 .toLocale 方法，而且在不同浏览器下获取的不一定一致，需要输出给用户的时候最好自己实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleString()</span><br><span class="line"><span class="comment">// "2018/4/25 下午10:30:35"</span></span><br></pre></td></tr></table></figure>
+<h1 id="业务实践"><a href="#业务实践" class="headerlink" title="业务实践"></a>业务实践</h1><h2 id="国际化配置"><a href="#国际化配置" class="headerlink" title="国际化配置"></a>国际化配置</h2><h3 id="国际活动常用时区"><a href="#国际活动常用时区" class="headerlink" title="国际活动常用时区"></a>国际活动常用时区</h3><ul>
+<li>印度: “+05:30”</li>
+<li>印尼: “+07:00”</li>
+<li>俄罗斯: “+03:00”</li>
+<li>巴基斯坦: “+05:00”</li>
+<li>孟加拉: “+06:00”</li>
+<li>越南: “+07:00”</li>
+</ul>
+<h3 id="常用时间日期表达方式"><a href="#常用时间日期表达方式" class="headerlink" title="常用时间日期表达方式"></a>常用时间日期表达方式</h3><ul>
+<li>印度：<code>May 6, 2018, 00:00:00 (IST)</code></li>
+<li>印尼：<code>May 30, 2018 23:59:59 (WIB)</code></li>
+</ul>
+<h3 id="对外显示"><a href="#对外显示" class="headerlink" title="对外显示"></a>对外显示</h3><p>对于多国家/多语言的站点，接口应当返回时间戳，然后在前端展示时才转换成当时时间显示。</p>
+<h3 id="对内配置"><a href="#对内配置" class="headerlink" title="对内配置"></a>对内配置</h3><ul>
+<li>对于一些对内的时间点，比如定时脚本配置，可以约定使用北京时间配置，方便本地同学辨识。</li>
+<li>对于一些涉及当地重要时间点的，比如斋月节的新月时间，应当约定使用当地时间进行配置，避免时区转换带来的隐性风险。</li>
+</ul>
+<h2 id="业务效果"><a href="#业务效果" class="headerlink" title="业务效果"></a>业务效果</h2><h3 id="用户活跃时间段"><a href="#用户活跃时间段" class="headerlink" title="用户活跃时间段"></a>用户活跃时间段</h3><p>印度：当地时间 16:00 - 20:00, 22:00 - 00:30<br>印尼：当地时间 14:30 - 16:30, 22:00 - 00:00</p>
+<h2 id="技术影响"><a href="#技术影响" class="headerlink" title="技术影响"></a>技术影响</h2><h3 id="浏览器时间校对"><a href="#浏览器时间校对" class="headerlink" title="浏览器时间校对"></a>浏览器时间校对</h3><p>由于浏览器端时间不可控，有可能被用户修改系统设置从而故意绕过业务逻辑，所以一律使用服务器时间：</p>
+<ul>
+<li>通过同步渲染的方式把服务器时间戳下发到页面</li>
+<li>心跳 ajax 获取服务器时间进行对时</li>
+</ul>
+<h3 id="服务器网络时间同步"><a href="#服务器网络时间同步" class="headerlink" title="服务器网络时间同步"></a>服务器网络时间同步</h3><p>NTP（Network Time Protocol，网络时间协议）是用来使网络中的各个计算机时间同步的一种协议。它的用途是把计算机的时钟同步到 UTC。Linux 系统中，为了避免主机时间因为在长时间运行下所导致的时间偏差，一般使用 ntp 服务来同步不同机器的时时间。</p>
+<h3 id="MySql-时间"><a href="#MySql-时间" class="headerlink" title="MySql 时间"></a>MySql 时间</h3><p>按照集团开发规约，有时间精度要求的业务，可以使用 datetime(6);　对精度没要求的，设置为datetime。</p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">Date - JavaScript | MDN</a></li>
+<li><a href="http://chitanda.me/2015/08/21/the-trivia-of-js-date-function" target="_blank" rel="noopener">JS原生Date类型方法的一些冷知识 | 我很好奇</a></li>
+<li><a href="https://www.atatech.org/articles/100154#58" target="_blank" rel="noopener">国际化概述及最佳实践 - ATA</a></li>
+<li><a href="https://www.atatech.org/articles/50331#22" target="_blank" rel="noopener">集团开发规约 - ATA</a></li>
+</ul>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    There is nothing here
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2018/11/28/whistle实战/">whistle实战</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2018/11/15/搜索渗透/">【转载】搜索渗透</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2018/11/12/前端开发Chrome插件/">前端开发Chrome插件</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2018/07/25/快速实现高精度动画/">快速实现高精度动画</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/coderkwong">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
