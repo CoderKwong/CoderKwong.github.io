@@ -12,6 +12,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="背景在做多语言国际化时，见识到印度人各种奇怪的小语种，什么泰米尔语、印地语，但在其中碰到一个棘手的布局问题——阿拉伯语的阅读方式。在我们人的阅读习惯中，文字绝大部分都是从左到右。但其中就有一些异类，如：阿拉伯语、希伯来语，他们的是从右到左阅读，排版也是从右到左，这个时候在已有的布局再做翻转就很麻烦了">
+    
 
     <!--Author-->
     
@@ -20,7 +22,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Kwong&#39;s Blog">
+        <meta property="og:title" content="阿拉伯语国际化">
     
 
     <!--Open Graph Description-->
@@ -31,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -42,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2018/7 - Kwong&#39;s Blog</title>
+    <title>阿拉伯语国际化 - Kwong&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -130,9 +132,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -140,70 +140,67 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2018/7</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2018/11/28/whistle实战/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        whistle实战
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/06/25/阿拉伯语国际化/">
+                阿拉伯语国际化
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-06-25</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在做多语言国际化时，见识到印度人各种奇怪的小语种，什么泰米尔语、印地语，但在其中碰到一个棘手的布局问题——阿拉伯语的阅读方式。在我们人的阅读习惯中，文字绝大部分都是从左到右。但其中就有一些异类，如：阿拉伯语、希伯来语，他们的是从右到左阅读，排版也是从右到左，这个时候在已有的布局再做翻转就很麻烦了，特别是一些轮播图和使用了position、float属性的。经过各种查找资料后，发现一些可以解决的方法。</p>
+<h2 id="Direction"><a href="#Direction" class="headerlink" title="Direction"></a>Direction</h2><p>在查找的时候发现direction这个属性，这个单词顾名思义就是方向，在CSS中它可以改变块的书写方向。也就是说，如果你的文字方向是左，使用了 <code>direction: rtl</code> 后，文字的方向就变成向右。<br><img src="https://res.cloudinary.com/daq48zmrm/image/upload/v1571941751/15291571941035_.pic_hd_hurkam.png" alt="效果展示"><br>如上图所示，是否这样就已经解决问题了呢？其实并不是的。</p>
+<h3 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position: absolute"></a>position: absolute</h3><p>当你的布局中使用了 <code>position: absolute;left: 0</code> 时，<code>direction: rtl</code> 是不会帮你左右翻转的。<br>此外，direction是针对CSS的，涉及到JS就无能为力了，所以在布局的时候需要考虑清楚，否则会对布局有很大的影响。<br>其次，direaction无法处理HTML中内联的样式，如 <code>&lt;div style=&quot;margin-left: 10px;&quot;&gt;&lt;/div&gt;</code> 需要改成使用class的形式才能切换，即 <code>.a{margin-left: 10px;} &lt;div class=&quot;a&quot;&gt;&lt;/div&gt;</code></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol>
+<li>给不需要翻转的模块使用CSS hacker <code>/* rtl: ignore */</code></li>
+<li>书写CSS的时候，提前定义好CSS规则 <code>.rtl {direction: rtl}</code>，需要翻转的使用class rtl</li>
+</ol>
+<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><p>除了direction之外，还有其他方法可以实现翻转，如<code>transform: scaleX(-1)</code>，可以让页面水平翻面。这种方法的好处就是有比较好的兼容性，和direction改变方向不同，你不需要考虑布局是 flex/float/absolute。<br>但是，此方法有个东西需要注意，如果你的布局元素里面有使用了 <code>postion: fixed</code>，然后再使用transform 会导致一些无法预估结果的问题（如，元素无法看见，定位偏移等）。这个问题的产生是因为使用<code>transform</code>的元素会自动创建一个容器块(containing block)，然后这个元素里使用<code>fixed</code> 的子元素就会相对该元素进行定位。另外，还有可能是受堆叠上下文(stacking context)的影响，也就是说层叠上下文与元素在 z 轴上的展示顺序相关，而且层叠上下文元素的层叠水平要比普通元素高，从而会导致遮挡(消失)的问题。</p>
+<h3 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h3><p>首先整体翻转<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[lang="ar"]</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scaleX</span>(-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后给不需要翻转的元素添加class<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[lang="ar"]</span> <span class="selector-class">.no-flip</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scalex</span>(-1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>思路基本如此，然后考虑好颗粒度去控制页面模块的展示即可。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>两种方法各有优劣，但是改造的成本依然不低，所以最好动手之前确认这些迭代可能出现的问题，避免先入为主的意识导致过高的改造成本。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/前端/">#前端</a> <a href="/tags/多语言/">#多语言</a> <a href="/tags/布局/">#布局</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2018/11/12/前端开发Chrome插件/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        前端开发Chrome插件
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/06/12/前端国际化时间日期概述与业务实践/">
-        <span class="archive-date">
-            Jun 2018
-        </span>
-        前端国际化时间日期概述与业务实践
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/07/25/快速实现高精度动画/">
-        <span class="archive-date">
-            Jul 2018
-        </span>
-        快速实现高精度动画
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2019/06/25/阿拉伯语国际化/">
-        <span class="archive-date">
-            Jun 2019
-        </span>
-        阿拉伯语国际化
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2018/11/15/搜索渗透/">
-        <span class="archive-date">
-            Nov 2018
-        </span>
-        【转载】搜索渗透
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
